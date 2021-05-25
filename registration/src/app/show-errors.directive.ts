@@ -20,7 +20,7 @@ export class ShowErrorsDirective {
           
             if(this.data.errors.required)
             {
-              console.log(this.data);
+              
               this.el.nativeElement.style.border="thick solid red";
       
             }
@@ -40,7 +40,7 @@ export class ShowErrorsDirective {
      }
      else if(this.data.name==='lastname')
      {
-       console.log(this.data);
+       
         if(this.data.invalid && (this.data.dirty||this.data.touched))
         {
             if(this.data.errors.required)
@@ -65,7 +65,7 @@ export class ShowErrorsDirective {
      }
      else if(this.data.name==='password')
      {
-       console.log(this.data);
+       
         if(this.data.invalid && (this.data.dirty||this.data.touched))
         {
             if(this.data.errors.required)
@@ -136,7 +136,7 @@ export class ShowErrorsDirective {
      }
      else if(this.data.name==='emailadd')
      {
-       console.log(this.data);
+       
         if(this.data.invalid && (this.data.dirty||this.data.touched))
         {
             if(this.data.errors.required)
