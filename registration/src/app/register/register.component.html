@@ -127,6 +127,8 @@
             </div>
             
             <div>
+                <label class="form-label">Date of Registration : </label>
+
                 <input class="form-control" type="date"
                 name="dateofreg" 
                 id="dateofreg" 
@@ -135,8 +137,10 @@
                 class="form-control"
                 required>
             </div>
-            <div>IND : {{dateofreg.value|date:'dd/MM/yyyy'}}</div>
-            <div>US : {{dateofreg.value|date:'MM/dd/yyyy'}}</div>
+            <div>Date with different formats : </div>
+            <div>IND : {{dateofreg.value|date:'fullDate'}}</div>
+            <div>US : {{dateofreg.value|date:'short'}}</div>
+            <div>UK : {{dateofreg.value|date:'full'}}</div>
             
            
                 <label class="form-label" for="country">Country : </label>
