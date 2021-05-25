@@ -1,1 +1,61 @@
-<p>W E L C O M E</p>
+<div fxLayoutAlign="center center" fxFlexfill>
+        <mat-card fxFlex="35">
+                <form fxLayoutAlign="stretch" fxLayout="column" #f="ngForm" (ngSubmit) = onSubmit(f,password,emailadd)>
+                        <mat-toolbar  fxLayoutAlign="stretch">L O G I N : </mat-toolbar>
+                        <div>
+                                <label for="emailid" class="form-label">Email : </label>
+                                <input class="form-control"
+                                type="text"
+                                name="emailadd" 
+                                id="emailadd"
+                                 ngModel
+                                #emailadd="ngModel"
+                                pattern='(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))'
+                                required
+                                [appShowErrors]="emailadd">
+                                
+                                    
+                                <div *ngIf="emailadd.invalid && (emailadd.dirty||emailadd.touched)" class="alert alert-danger">
+                                <div *ngIf="emailadd.errors?.pattern">Valid Email ID Required!</div>
+                                <div *ngIf="emailadd.errors?.required">Invalid!</div>
+                                            
+                                </div>
+                                <label class="form-label" for="password"> Password : </label>
+                                <input class="form-control"
+                                type="password" 
+                                name="password"
+                                id="password" 
+                                #password="ngModel"
+                                ngModel
+                                [appShowErrors]="password"
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+                                required>
+
+                                <div *ngIf="password.invalid && (password.dirty||password.touched)"
+                                class="alert alert-danger">
+            
+                                <div *ngIf="password.errors?.required">
+                                Password Required!
+            
+                                </div>
+            
+                                <div *ngIf="password.errors?.pattern">
+                                <p>Password must contain : </p>
+                                <p>* One Upper Case</p>
+                                <p>* One Lower Case</p>
+                                <p>* One Number</p>
+                                <p>*One Special Character</p>
+                                <p> ****Password Length Should be 8 or more  ****</p>
+                                </div>
+                                </div>
+                                <br>
+                                
+                                <button type="submit" class="btn btn-success">L O G I N </button>
+                                <span class="spacer"></span>
+                                <button type="button" class="btn btn-warning" routerLink='/register'>R E G I S T E R</button>
+                
+                                
+                        </div>
+                </form>
+        </mat-card>
+</div>
