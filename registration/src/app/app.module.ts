@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PipeCustomPipe } from './pipe-custom.pipe';
 import { ShowErrorsDirective } from './show-errors.directive';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
 
 //material
 import {MatInputModule} from '@angular/material/input';
@@ -20,7 +21,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './child/child.component';
-
+import { HttpComponentComponent } from './http-component/http-component.component';
+import { DateMomentComponent } from './date-moment/date-moment.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HarshComponent } from './harsh/harsh.component';
+import { GaurangComponent } from './gaurang/gaurang.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,11 @@ import { ChildComponent } from './child/child.component';
     NavbarComponent,
     PipeCustomPipe,
     ShowErrorsDirective,
-    ChildComponent
+    ChildComponent,
+    HttpComponentComponent,
+    DateMomentComponent,
+    HarshComponent,
+    GaurangComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,10 @@ import { ChildComponent } from './child/child.component';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

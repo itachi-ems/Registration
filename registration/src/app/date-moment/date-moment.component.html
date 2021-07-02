@@ -1,0 +1,22 @@
+
+<div fxLayoutAlign="center center" fxFlexfill>
+    <mat-form-field>
+    <label class="form-label">Date of Birth : </label>
+
+   <input matInput [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate">
+   <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+   <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field>
+</div>
+
+<label class="form-label">Date of registration : </label>
+<button type="button" class="btn btn-success" (click)='getFormattedDate()'>Today's Date</button>
+
+<div>Date with different formats : </div>
+<div>DAY : {{ result1 }}</div>
+<div>MONTH : {{result2}}</div>
+<div>YEAR : {{ result3}}</div>
+<div>TIME : {{ result4 }}</div>
+
+
+
