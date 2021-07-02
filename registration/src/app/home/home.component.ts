@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {InputData} from '../../Temp/Inputdata';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
   data:InputData = new InputData();
   validData:boolean=false;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,10 @@ export class HomeComponent implements OnInit {
     console.log(this.data);
     this.validData=true;
 
-    alert("Login Successful")
+    
+    if(this.data.password==="Aa@123456" && this.data.emailid==="1@gmail.com"){  
+      this.router.navigate(['/upload']);
+    }
     
   }
 }

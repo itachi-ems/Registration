@@ -20,13 +20,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChildComponent } from './child/child.component';
 import { HttpComponentComponent } from './http-component/http-component.component';
-import { DateMomentComponent } from './date-moment/date-moment.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { HarshComponent } from './harsh/harsh.component';
-import { GaurangComponent } from './gaurang/gaurang.component';
+import { UploadComponent } from './upload/upload.component';
+
 
 @NgModule({
   declarations: [
@@ -36,11 +34,10 @@ import { GaurangComponent } from './gaurang/gaurang.component';
     NavbarComponent,
     PipeCustomPipe,
     ShowErrorsDirective,
-    ChildComponent,
     HttpComponentComponent,
-    DateMomentComponent,
-    HarshComponent,
-    GaurangComponent
+    UploadComponent,
+   
+   
   ],
   imports: [
     BrowserModule,
