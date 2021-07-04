@@ -2,7 +2,7 @@
     
     <mat-card fxFlex="35">
         
-        <form fxLayoutAlign="stretch" fxLayout="column" #f="ngForm" (ngSubmit) = onSubmit(f,firstname,lastname,password,emailadd,phoneNo) >
+        <form fxLayoutAlign="stretch" fxLayout="column" #f="ngForm" (ngSubmit) = onSubmit(f,firstname,lastname,password,emailadd) >
             <mat-toolbar fxLayoutAlign="stretch">Registration Form : </mat-toolbar>
             
                 <label class="form-label" for="firstname"> First-Name : </label>
@@ -127,30 +127,7 @@
             </div>
             
             
-                    
-           
-                <label class="form-label" for="phoneNo">Contact No : </label>
-                <input class="form-control"
-                type="text"
-                name="phoneNo"
-                id="phoneNo"
-                #phoneNo="ngModel" 
-                ngModel
-                required 
-                pattern="^[0-9]{10,10}$" 
-                required
-                [appShowErrors]="phoneNo">
-           
-                        
-            <div *ngIf="phoneNo.invalid && (phoneNo.dirty||phoneNo.touched)" class="alert alert-danger">
-                <div *ngIf="phoneNo.errors?.pattern">
-                    10 Digit Required!
-                </div>
-                <div *ngIf="phoneNo.errors?.required">
-                    Enter your Contact Number : 
-                </div>
 
-            </div>
             <br>
             
             <button mat-raised-button
